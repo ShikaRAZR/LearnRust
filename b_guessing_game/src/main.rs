@@ -45,7 +45,7 @@ fn main() { // program runs from here
         let guess: u32 = match guess.trim().parse(){
             Ok(num) => num, // if parse is sucessful, will return an Ok value that contains Result number
             Err(_) => continue, //if unsucessful, return Err that contains info about error, underscore (_) is a catchall value
-            // continue tells program to go through next iteration of loop
+            // "continue" tells program to break loop and go through next iteration of loop
         };
 
         println!("You guessed: {}", guess); // '{}' is a placeholder for 'guess' var
@@ -55,7 +55,7 @@ fn main() { // program runs from here
         match guess.cmp(&secret_number){ 
             //match expression are made up of arms, will return one of these: 
             // Ordering::Less, Ordering::Greater, Ordering::Equal (these are the arms)
-            // the match expression ends once one of tthe arm's code is executed 
+            // the match expression ends once one of the arm's code is executed 
             // if guess is 50 and secret_number is 25 (last scenario not checked)
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
