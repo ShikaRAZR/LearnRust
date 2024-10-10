@@ -28,7 +28,7 @@ fn main() {
     let spaces = "   ";
     let spaces = spaces.len();
 
-    //this will give an error
+    //this will give an error, since you can't change a var type without shadowing
     //let mut spaces = "   "
     //spaces = spaces.len();
 
